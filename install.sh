@@ -15,24 +15,24 @@
 # limitations under the License.
 
 # Init variables
-WORKSPACE=${1}
-VERSION=${2:-'1.7.4'}
+GOLANG_WORKSPACE=${1}
+GOLANG_VERSION=${2:-'1.7.4'}
 
 # Check preconditions
-if [ -z "${WORKSPACE}" ]; then
+if [ -z "${GOLANG_WORKSPACE}" ]; then
     echo 'The workspace location is required to set the GOPATH environment variable.'
     exit 1
 fi
 
 # Download the archive
-wget https://storage.googleapis.com/golang/go${VERSION}.linux-amd64.tar.gz
+wget https://storage.googleapis.com/golang/go${GOLANG_VERSION}.linux-amd64.tar.gz
 
 # Extract it into /usr/local, creating a Go tree in /usr/local/go
-sudo tar -C /usr/local -xzf go${VERSION}.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go${GOLANG_VERSION}.linux-amd64.tar.gz
 
 # Configure the user environment
 echo 'export GOROOT="/usr/local/go"'                | tee -a ~/.bash_profile
-echo "export GOPATH=\"${WORKSPACE}\""               | tee -a ~/.bash_profile
+echo "export GOPATH=\"${GOLANG_WORKSPACE}\""        | tee -a ~/.bash_profile
 echo 'export PATH="$GOPATH/bin:$GOROOT/bin:$PATH"'  | tee -a ~/.bash_profile
 
 # Init the user environment
