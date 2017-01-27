@@ -1,4 +1,4 @@
-# Script | Ubuntu | Go Programming Language
+# Script :: Ubuntu :: Go Programming Language
 
 [![License](https://img.shields.io/github/license/odaceo/script-ubuntu-golang.svg)](LICENSE)
 
