@@ -37,3 +37,6 @@ echo 'export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"'  | tee -a ~/.bash_profile
 
 # Init the user environment
 source ~/.bash_profile
+
+# Install a linter for Go source code
+sudo go get github.com/golang/lint/golint
