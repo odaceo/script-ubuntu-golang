@@ -33,7 +33,7 @@ sudo tar -C /usr/local -xzf go${GOLANG_VERSION}.linux-amd64.tar.gz
 # Configure the user environment
 echo 'export GOROOT="/usr/local/go"'                | tee -a ~/.bash_profile
 echo "export GOPATH=\"${GOLANG_WORKSPACE}\""        | tee -a ~/.bash_profile
-echo 'export PATH="$GOPATH/bin:$GOROOT/bin:$PATH"'  | tee -a ~/.bash_profile
+echo 'export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"'  | tee -a ~/.bash_profile
 
 # Init the user environment
 source ~/.bash_profile
