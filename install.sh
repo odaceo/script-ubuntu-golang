@@ -16,7 +16,7 @@
 
 # Init variables
 GOLANG_WORKSPACE=${1}
-GOLANG_VERSION=${2:-'1.7.4'}
+GOLANG_VERSION=${2:-'1.8.3'}
 
 # Check preconditions
 if [ -z "${GOLANG_WORKSPACE}" ]; then
