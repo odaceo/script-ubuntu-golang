@@ -19,6 +19,5 @@ Vagrant.configure(2) do |config|
 
   config.vm.box = "bento/ubuntu-16.04"
 
-  config.vm.provision "shell", privileged: false, path: "install.sh",
-    args: ["/vagrant"]
+  config.vm.provision "shell", privileged: false, path: "install.sh"
 end

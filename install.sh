@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # Init variables
-GOLANG_WORKSPACE=${1}
+GOLANG_WORKSPACE=${1:-'/home/vagrant'}
 GOLANG_VERSION=${2:-'1.8.3'}
 
 # Check preconditions
